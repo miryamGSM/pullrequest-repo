@@ -10,7 +10,6 @@ namespace Codice.Client.GlassFS
 {
     internal class FileCache
     {
-        private string mBasePath;
 
         internal FileCache()
         {
@@ -38,6 +37,7 @@ namespace Codice.Client.GlassFS
 
             return file;
         }
+        private string mBasePath;
     }
     internal class Hasher
     {
@@ -46,8 +46,7 @@ namespace Codice.Client.GlassFS
             StringBuilder hexString = new StringBuilder(hash.Length);
             for (int i = 0; i < hash.Length; i++)
             {
-                // modified by first user
-                hexString.Append(((byte)(char)hash[i]).ToString("X2"));
+				//dummy merge result
             }
             return hexString.ToString();
         }
