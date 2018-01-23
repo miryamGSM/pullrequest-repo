@@ -13,8 +13,6 @@ namespace Codice.Client.GlassFS
 {
     internal class FileCache
     {
-        private string mBasePath;
-
         internal FileCache()
         {
             mBasePath = Path.Combine(Path.GetDirectoryName(
@@ -31,6 +29,7 @@ namespace Codice.Client.GlassFS
             {
                 char c = (char)hash[i];
                 byte b = (byte) c;
+                // this is anotherr change baby
                 hexString.Append(b.ToString("X2"));
             }
 
@@ -55,5 +54,7 @@ namespace Codice.Client.GlassFS
 
             return file;
         }
+
+        private string mBasePath;
     }
 }
